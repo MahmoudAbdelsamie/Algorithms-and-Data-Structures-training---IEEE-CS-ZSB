@@ -2,15 +2,15 @@
 bool has_cycle(SinglyLinkedListNode* head) {
 SinglyLinkedListNode *slow = head;
 SinglyLinkedListNode *fast = head;
-if(head == NULL || head->next==NULL) // Condition 1
+if(head == NULL || head->next==NULL) 
 {
     return false;
 }
-while( fast!=NULL&&fast->next!=NULL) // Condition 2
+while( fast!=NULL&&fast->next!=NULL) 
 {
-    slow = slow->next; // Tortoise node
-    fast = fast->next->next; // Hare node
-    if(slow==fast)  // Condition 3
+    slow = slow->next; 
+    fast = fast->next->next; 
+    if(slow==fast) 
     {
         return true;
         break;
